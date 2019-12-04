@@ -30,7 +30,7 @@ class Prediction(Resource):
 		x= request_data['height']						#extracts height from json data
 
 		model_instance = model.Regression(w, b)						#creates instance of Regression class and run constructor of class
-		predicted_value = float(model_instance.predict(x))		#calls the predict function of Regression class and saves the data to predicted value variable
+		predicted_value = double(model_instance.predict(x))		#calls the predict function of Regression class and saves the data to predicted value variable
 		
 		return {"price": predicted_value}				#converts the dictionary to json data and return this data to client application
 
