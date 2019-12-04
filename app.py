@@ -3,7 +3,6 @@ from flask_restful import Resource, Api, reqparse
 import model
 
 app = Flask(__name__)
-# app.config['DEBUG'] = True
 api = Api(app)
 
 class Prediction(Resource):
@@ -13,7 +12,7 @@ class Prediction(Resource):
         required=True,
         help="This field cannot be left blank!"
     )
-	parser.add_argument('breadth',
+	parser.add_argument('length',
         type=float,
         required=True,
         help="This field cannot be left blank!"
@@ -27,7 +26,7 @@ class Prediction(Resource):
 	def post(self):
 		request_data =  Prediction.parser.parse_args()
 		w= request_data['width']						#extracts width from json data
-		b= request_data['breadth']						#extracts breadth from json data
+		b= request_data['length']						#extracts length from json data
 		x= request_data['height']						#extracts height from json data
 
 		model_instance = model.Regression(w, b)						#creates instance of Regression class and run constructor of class
@@ -37,5 +36,5 @@ class Prediction(Resource):
 
 api.add_resource(Prediction, '/')
 
-if __name__ == '__main__':
+if __name__ == '__main__':						#To call app.run only on local system
     app.run(port=5000, debug=True)  # important to mention debug=True
