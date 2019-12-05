@@ -38,4 +38,4 @@ class Prediction(Resource):						#Prediction class inherits Resource class
 api.add_resource(Prediction, '/')			#To add a resource Prediction and define its end point
 
 if __name__ == '__main__':					#To call app.run only on local system
-    app.run(port=5000, debug=True)  		# debug=True helps give better info while debugging
+    app.run(port=5000, debug=True)  		# debug=True provides better error messages
