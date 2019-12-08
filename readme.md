@@ -1,4 +1,4 @@
-# Prediction REST API
+# Package Price Prediction API
 
 ## Installation
 
@@ -8,10 +8,10 @@ pip install flask-restful
 pip install numpy
 ```
 
-# Description
+## Description
 
-It is a REST API used to predict price of an item. It accepts length, width and height and return price of item.
+This is a python based Flask-RESTful Application Programming Interface which is deployed on Heroku server. It receives request from client application, processes request on received data and then returns the processed data to client application. It accepts three numeric values in JSON format and returns a numeric value or error message (if input data is invalid) in JSON format.
 
 ## Implementation
 
-This project is implemented using Flask.
+This project is implemented using Flask and Flask-RESTful.
