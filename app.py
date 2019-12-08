@@ -31,8 +31,7 @@ class Prediction(Resource):						#Prediction class inherits Resource class
 		depth = input_data['depth']						
 
 		model_instance = model.Regression(width, length)			#creates instance of Regression class and run constructor of class
-		predicted_value = float(model_instance.predict(depth))		#calls the predict function of Regression class and saves the return data to predicted_value variable
-		
+		predicted_value = model_instance.predict(depth)		#calls the predict function of Regression class and saves the return data to predicted_value variable
 		return {"price": predicted_value}				#returns processed data to client app with default response code 200 OK
 
 api.add_resource(Prediction, '/')			#To add a resource Prediction and define its Endpoint
