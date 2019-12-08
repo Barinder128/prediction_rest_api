@@ -1,4 +1,4 @@
-# Package Price Prediction API
+# Packaging Price Prediction API
 
 ## Installation
 
