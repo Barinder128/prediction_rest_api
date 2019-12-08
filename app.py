@@ -11,17 +11,17 @@ class Prediction(Resource):						#Prediction class inherits Resource class
 	parser.add_argument('width',				#if the type attribute or required attribute is not satisfied
         type=float,								#the post function returns string in help attribute.
         required=True,
-        help="This field cannot be left blank!"
+        help="Invalid data. Please enter only numeric data"
     )
 	parser.add_argument('length',
         type=float,
         required=True,
-        help="This field cannot be left blank!"
+        help="Invalid data. Please enter only numeric data"
     )
 	parser.add_argument('depth',
         type=float,
         required=True,
-        help="This field cannot be left blank!"
+        help="Invalid data. Please enter only numeric data"
     )
 #----function which receives post request from client app and returns json after processing.
 	def post(self):
